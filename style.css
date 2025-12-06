@@ -1,0 +1,83 @@
+body {
+  background-color: #E6E6FA; /* лавандовый фон для всей страницы */
+  margin: 0;                 /* убираем стандартные отступы браузера */
+  font-family: Arial, sans-serif; /* задаём шрифт для всей страницы */
+  padding-top: 85px;         /* отступ сверху, равный высоте h1 */
+}
+
+
+h1 {
+  text-align: center;       /* выравнивание текста по центру */
+  position: fixed;          /* фиксированное позиционирование */
+  top: 0px;                 /* фиксируем прямо у верхнего края */
+  left: 50%;                /* смещаем в центр */
+  transform: translateX(-50%); /* корректируем, чтобы центр совпадал */
+  width: 100%;              /* можно задать ширину, чтобы занимал всю строку */
+  margin: 0;                /* убираем стандартные отступы */
+  background-color: burlywood; /* фон под заголовком */
+  padding: 20px;            /* внутренний отступ */
+  z-index: 1000;            /* чтобы заголовок был поверх карточек */
+}
+
+
+h1::first-letter{
+    color: deeppink;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
+
+.card{
+   width: 400px;
+   height: 610px;
+   background-color: #FFE4E1;
+   border-radius: 20px;
+   padding-top: 20px; /* отступ сверху внутри карточки */
+   transition: 0.3s ease;
+   border: 3px solid #444; /* линия по краю карточки */
+}
+
+.cards-container {
+  display: flex;              /* включаем flex-контейнер */
+  justify-content: center;    /* центрируем карточки по горизонтали */
+  gap: 20px;                  /* расстояние между карточками */
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* эффект при наведении */
+}
+
+.photo:hover {
+    transform: scale(1.2); /* эффект при наведении */
+}
+
+
+.photo img {
+   width: 200px;        /* уменьшаем размер картинки */
+   height: 250px;         /* одинаковая высота */
+   object-fit: cover;     /* картинка заполняет блок, лишнее обрезается */
+   border-radius: 20px; /* скругляем углы */
+   display: block;      /* делаем блочным элементом */
+   margin: 0 auto;      /* центрируем по горизонтали */
+}
+
+
+.info {
+  margin-top: 20px;    /* отступ сверху, чтобы текст не прилипал к фото */
+}
+
+
+.info h2 {
+  text-align: center;     /* центрируем заголовок */
+  margin-bottom: 20px;    /* добавляем отступ снизу */
+}
+
+
+.info p {
+  text-align: justify;   /* выравнивание текста по ширине */
+  margin: 15px 0;         /* увеличиваем вертикальные отступы между абзацами */
+  padding: 0 10px;        /* отступы: сверху/снизу 0, слева/справа 10px */
+  line-height: 1.5;       /* делаем текст более читаемым */
+}
